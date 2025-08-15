@@ -4,7 +4,7 @@ def call() {
             rm -rf ${WORKSPACE}/argocd-test
             git clone https://${GIT_TOKEN}@github.com/MostafaMahmoud2020/argocd-test.git ${WORKSPACE}/argocd-test
             cd ${WORKSPACE}/argocd-test
-            sed -i 's|image: .*|image: mostafamahmoud0/test-java-app:v${env.BUILD_NUMBER}|' deployment.yaml
+            sed -i 's|image: .*|image: mostafamahmoud0/test-java-app:v${env.BUILD_NUMBER}|' deployment.yml
             git config user.email "jenkins@example.com"
             git config user.name "Jenkins"
             git commit -am "Update image to mostafamahmoud0/test-java-app:v${env.BUILD_NUMBER}"
