@@ -34,6 +34,12 @@ pipeline {
                 dockerPush()
             }
         }
+        stage('Update K8s Manifest') {
+            steps {
+                updateK8sManifest()
+            }
+        }
+        
     }
 }
 
